@@ -1,7 +1,17 @@
 <template>
+<div>
   <div>
-    <div v-for="item in fetchedAsk" :key="item">{{ item.title }}</div>
+    <p v-for="(item,idx) in this.$store.state.ask" :key="idx">
+      <!-- <a v-bind:href="item.url">
+        {{ item.title }}
+      </a> -->
+      <router-link v-bind:to="`item/${item.id}`">
+        {{item.title}}
+      </router-link>
+      <small>{{item.time_ago}}by{{item.user}}</small>
+    </p>
   </div>
+</div>
 </template>
 
 <script>

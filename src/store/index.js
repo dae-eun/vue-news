@@ -10,12 +10,18 @@ export const store = new Vuex.Store({
     news:[],
     jobs:[],
     ask:[],
+    user:{},
+    item:[],
+    
   },
   getters:{
     //computed와 동일한 속성이지만 store에 있는것
     fetchedAsk(state){
       return state.ask;
-    }
+    },
+    fetchedItem(state){
+      return state.item;
+    },
   },
   mutations,
   actions,
