@@ -59,7 +59,7 @@ export default {
   },
   computed:{
     listItems(){
-    const name = this.$route.name;
+      const name = this.$route.name;
       if (name==='news'){
         return this.$store.state.news;
       }else if(name==='ask'){
@@ -73,7 +73,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .news-list{
     margin:0;
     padding:0;
